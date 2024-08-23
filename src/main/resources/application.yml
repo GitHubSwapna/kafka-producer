@@ -1,0 +1,22 @@
+message:
+  topic:
+    name: "message-topic"
+customer:
+  topic:
+    name: "customer-topic"
+server:
+  port: "9191"
+spring:
+  application:
+    name: "spring-kafka-producer"
+  kafka:
+      producer:
+        bootstrap-servers: "localhost:9092"
+        key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+        value-serializer: "org.springframework.kafka.support.serializer.JsonSerializer"
+        group-id: "com.producer"
+        properties:
+          spring:
+            json:
+              trusted:
+                packages: "com.kafka.dto.*"
