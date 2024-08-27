@@ -10,4 +10,4 @@ Using StringSerializer for Key and value as JsonSerializer
 Kafka Server running inside the docker.
 
 create the image of the application 
-                    docket build -t kafka-producer .
+                    docker build -t kafka-producer .
