@@ -14,7 +14,7 @@ spring:
     name: "spring-kafka-producer"
   kafka:
       producer:
-        bootstrap-servers: "broker:9092"
+        bootstrap-servers: "broker:9292"
         key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
         value-serializer: "org.springframework.kafka.support.serializer.JsonSerializer"
         group-id: "com.producer"
