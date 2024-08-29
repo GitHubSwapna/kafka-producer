@@ -4,6 +4,9 @@ message:
 customer:
   topic:
     name: "customer-topic"
+# IMPORTANT: Since we are adding PLAINTEXT://broker:9092 as broker-server URL,
+# if you start the consumer service outside the kafka_network, it will not be able to connect to the broker.
+# Hence, the service will not start outside the Docker container network.
 server:
   port: "9191"
 spring:
@@ -11,7 +14,7 @@ spring:
     name: "spring-kafka-producer"
   kafka:
       producer:
-        bootstrap-servers: "localhost:9092"
+        bootstrap-servers: "broker:9092"
         key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
         value-serializer: "org.springframework.kafka.support.serializer.JsonSerializer"
         group-id: "com.producer"
