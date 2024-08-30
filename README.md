@@ -7,9 +7,10 @@
 
 Using StringSerializer for Key and value as JsonSerializer 
 
-This Application running inside the docker.
+This Application is going to run inside the docker.
+1.do maven clean and install
 
-create the image of the application inside docker using
+2.create the image of the application inside docker using
                     docker build -t kafka-producer .
 
 Data can post using URL http://localhost:9191/publish
