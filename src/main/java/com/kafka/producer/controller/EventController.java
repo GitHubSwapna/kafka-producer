@@ -2,6 +2,7 @@ package com.kafka.producer.controller;
 
 import com.kafka.dto.Customer;
 import com.kafka.producer.service.EventMessageProducer;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public class EventController {
     }
 **/
     @PostMapping("/publish")
-    public ResponseEntity sendEvents(@RequestBody Customer customer)
+    public ResponseEntity sendEvents(@RequestBody @Valid Customer customer)
     {
         eventMessageProducer.sendEventsToTopic(customer);
         return ResponseEntity.ok("message " +customer.toString()+" published successfully ..");

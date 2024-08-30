@@ -1,21 +1,31 @@
 package com.kafka.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+
 public class Customer {
 
-    private int id;
+   // @NotEmpty
+   // @Min(value = 1, message = "Minimum id Required  1 or above")
+    private Integer id;
+    
+    @NotEmpty
     private String name;
+    @Email
     private String email;
+    @NotEmpty
     private String contactNo;
 
     public Customer()
     {
 
     }
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

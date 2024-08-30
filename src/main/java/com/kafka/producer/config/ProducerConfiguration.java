@@ -14,16 +14,16 @@ public class ProducerConfiguration {
     @Value("${customer.topic.name}")
     private String customerTopic;
 
-    @Bean
-    public NewTopic createTopic()
-    {
-        return new NewTopic(messageTopic, 5, (short) 1);
-    }
+    //@Bean
+   // public NewTopic createTopic()
+   // {
+        //return new NewTopic(messageTopic, 2, (short) 1);
+   // }
 
     @Bean
     public NewTopic createCustomerTopic()
     {
-        return new NewTopic(customerTopic, 3, (short) 1);
+        return new NewTopic(customerTopic, 1, (short) 1);
     }
 
 }
