@@ -1,7 +1,10 @@
 #Local Kafka Server startup process
-#Before run the Kafka Producer run the Kafka Kraft commands.\bin\windows\kafka-storage.bat random-uuid
+#Before run the Kafka Producer run the Kafka Kraft commands
+.\bin\windows\kafka-storage.bat random-uuid
 
+Replace the generated RandomUUID with 'random-uuid' in the below command
 #.\bin\windows\kafka-storage.bat format -t random-uuid -c .\config\kraft\server.properties
+
 
 #.\bin\windows\kafka-server-start.bat .\config\kraft\server.properties
 
