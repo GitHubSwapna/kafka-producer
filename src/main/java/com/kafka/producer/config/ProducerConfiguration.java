@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ProducerConfiguration {
-   //NewComment added
+   //NewComment updated
     @Value("${message.topic.name}")
     private String messageTopic;
 
